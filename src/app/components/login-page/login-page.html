@@ -1,0 +1,78 @@
+<div class="login-wrapper" [ngClass]="userType">
+  <div class="toggle-group">
+    <button type="button" class="toggle-item" [class.active]="userType==='customer'" (click)="toggleUserType('customer')">
+      Customer
+    </button>
+    <button type="button" class="toggle-item" [class.active]="userType==='influencer'" (click)="toggleUserType('influencer')">
+      I am Influencer
+    </button>
+  </div>
+
+  <div class="content">
+    <h1>Welcome Back!</h1>
+    <p>{{ mode === 'login' ? 'Sign in' : 'Create an account' }} as {{ userType === 'customer' ? 'Customer' : 'Influencer' }}</p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- shared login fields -->
+      <ng-container *ngIf="mode === 'login'">
+        <label>Email Address</label>
+        <input type="email" formControlName="email" placeholder="Enter your email" />
+
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="Enter your password" />
+
+        <div class="row">
+          <label><input type="checkbox" formControlName="remember" /> Remember me</label>
+          <a class="forgot" href="#">Forgot Password?</a>
+        </div>
+      </ng-container>
+
+      <!-- registration fields -->
+      <ng-container *ngIf="mode === 'register'">
+        <label>Full Name</label>
+        <input type="text" formControlName="fullName" />
+
+        <label>Email Address</label>
+        <input type="email" formControlName="email" />
+
+        <label>Phone Number</label>
+        <input type="tel" formControlName="phone" />
+
+        <label>Password</label>
+        <input type="password" formControlName="password" />
+
+        <ng-container *ngIf="userType === 'customer'">
+          <label>Business Name <span class="optional">(optional)</span></label>
+          <input type="text" formControlName="business" />
+
+          <label>Industry Type</label>
+          <input type="text" formControlName="industry" />
+        </ng-container>
+
+        <ng-container *ngIf="userType === 'influencer'">
+          <label>Social Media Platform</label>
+          <input type="text" formControlName="platform" />
+
+          <label>Channel / Profile URL</label>
+          <input type="url" formControlName="profileUrl" />
+
+          <label>Follower Count</label>
+          <input type="number" formControlName="followers" />
+
+          <label>Content Category</label>
+          <input type="text" formControlName="category" />
+        </ng-container>
+      </ng-container>
+
+      <button class="submit" type="submit">
+        {{ mode === 'login' ? 'Sign In' : 'Sign Up' }}
+      </button>
+    </form>
+
+    <p class="switch-mode">
+      <a href="#" (click)="toggleMode(); $event.preventDefault();">
+        {{ mode === 'login' ? 'Create a new account' : 'Already have an account? Sign in' }}
+      </a>
+    </p>
+  </div>
+</div>

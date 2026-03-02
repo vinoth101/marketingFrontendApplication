@@ -1,0 +1,21 @@
+<section class="landing-cards">
+  <a class="card influencer" [routerLink]="['/login']" [queryParams]="{ user: 'influencer' }">
+    <div class="card-image"></div>
+    <div class="card-body">
+      <h2>Influencer</h2>
+      <p class="subtitle">vTube | Reel Creator</p>
+      <p>Find the right food influencer for your business</p>
+    </div>
+    <button class="card-button">Find Influencer →</button>
+  </a>
+
+  <a class="card event" [routerLink]="['/login']" [queryParams]="{ user: 'customer' }">
+    <div class="card-image"></div>
+    <div class="card-body">
+      <h2>Event Management</h2>
+      <p class="subtitle">Wedding | Other</p>
+      <p>Explore events and make your special day unforgettable</p>
+    </div>
+    <button class="card-button">Explore Event →</button>
+  </a>
+</section>

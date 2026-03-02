@@ -1,0 +1,90 @@
+
+cursor: default;
+
+/* overall container */
+.landing-cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* base card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.card-body h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.card-body .subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+
+.card-body p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.card-button {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: auto;
+}
+.card-button:hover {
+  opacity: 0.9;
+}
+
+/* colors for each card */
+.card.influencer .card-button {
+  background: linear-gradient(90deg, #b832f2, #f53ea2);
+  color: #fff;
+}
+
+.card.event .card-button {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: #fff;
+}
+
+.card.influencer .card-image {
+  background-image: url('/assets/influencer.jpg');
+}
+
+.card.event .card-image {
+  background-image: url('/assets/event.jpg');
+}
