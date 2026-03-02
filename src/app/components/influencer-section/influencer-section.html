@@ -1,0 +1,85 @@
+<section class="influencer-section">
+  <div class="influencer-container">
+    <div class="influencer-content">
+      <div class="influencer-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        <span>Influencer Marketing</span>
+      </div>
+
+      <h2 class="influencer-title">Amplify Your Brand with Influencer Promotion</h2>
+      
+      <p class="influencer-description">
+        Partner with top influencers to create buzz around your event. From Instagram stars to YouTube creators, we connect you with the perfect voices for your brand.
+      </p>
+
+      <div class="features-grid">
+        @for (feature of features; track feature.title) {
+          <div class="feature-item">
+            <div class="feature-icon">
+              @switch (feature.icon) {
+                @case ('trending') {
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                    <polyline points="17 6 23 6 23 12"/>
+                  </svg>
+                }
+                @case ('users') {
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                }
+                @case ('target') {
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="6"/>
+                    <circle cx="12" cy="12" r="2"/>
+                  </svg>
+                }
+                @case ('zap') {
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                  </svg>
+                }
+              }
+            </div>
+            <div class="feature-content">
+              <h3 class="feature-title">{{ feature.title }}</h3>
+              <p class="feature-description">{{ feature.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+
+      <a routerLink="/influencer" class="btn-campaign">Start Campaign</a>
+    </div>
+
+    <div class="influencer-visual">
+      <div class="active-badge">
+        <div class="badge-circles">
+          <span class="circle pink"></span>
+          <span class="circle blue"></span>
+          <span class="circle orange"></span>
+        </div>
+        <div class="badge-text">
+          <span class="badge-count">+250</span>
+          <span class="badge-label">Active Influencers</span>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=500&fit=crop" 
+           alt="Influencer working" 
+           class="influencer-image">
+      <div class="reach-badge">
+        <span class="reach-number">10M+</span>
+        <span class="reach-label">Total Reach</span>
+      </div>
+    </div>
+  </div>
+</section>
