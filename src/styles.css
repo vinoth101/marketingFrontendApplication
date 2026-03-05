@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+      --pink: #e91e8c;
+      --purple: #9c27b0;
+      --grad: linear-gradient(135deg, #e91e8c, #9c27b0);
+      --light: #fff8fe;
+      --border: #f0d6f5;
+    }
 * {
   margin: 0;
   padding: 0;
