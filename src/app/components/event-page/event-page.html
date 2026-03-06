@@ -225,7 +225,7 @@
           <textarea formControlName="message"
             placeholder="Share your vision, theme ideas, special requests, or anything else you'd like us to know..."></textarea>
         </div>
-        <button class="form-submit" onclick="handleSubmit()">Send My Enquiry ✨</button>
+        <button class="form-submit">Send My Enquiry ✨</button>
         <p class="form-note">By submitting you agree to our <span>Privacy Policy</span>. We never share your data.</p>
         </div>
       </form>
@@ -234,6 +234,20 @@
   </div>
 </section>
 
+<div class="success-overlay" *ngIf="successMessage">
+  <div class="success-card">
+    <span class="close-btn" (click)="closePopup()">✖</span>
+    <div style="width:72px;height:72px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+      <svg viewBox="0 0 32 32" fill="none" width="32" height="32">
+        <polyline class="check" points="6,16 13,23 26,9"
+          stroke="#22c55e" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1 style="font-size:22px;font-weight:700;color:#333;margin-bottom:10px;">Successfully Submitted!</h1>
+    <p style="font-size:14px;color:#999;line-height:1.7;">Thank you! Your form has been received.<br/>We'll get back to you shortly.</p>
+  </div>
+</div>
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
   <div class="sec-header">
