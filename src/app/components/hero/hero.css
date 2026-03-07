@@ -24,7 +24,7 @@
 
 .hero-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255 255 255 / 90%);
   line-height: 1.7;
   margin-bottom: 2.5rem;
   max-width: 450px;
@@ -52,7 +52,7 @@
 
 .btn-book:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
 }
 
 .btn-services {
@@ -62,7 +62,7 @@
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgb(255 255 255 / 50%);
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -70,7 +70,7 @@
 }
 
 .btn-services:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255 255 255 / 10%);
   border-color: white;
 }
 
@@ -88,7 +88,7 @@
   height: 320px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 50px rgb(0 0 0 / 30%);
 }
 
 .stat-card {
@@ -96,7 +96,7 @@
   background: white;
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 15%);
   display: flex;
   flex-direction: column;
 }
@@ -122,7 +122,7 @@
   left: -40px;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;

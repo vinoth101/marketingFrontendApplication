@@ -41,7 +41,7 @@
 }
 
 .footer-tagline {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255 255 255 / 60%);
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -55,7 +55,7 @@
 .social-icon {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255 255 255 / 10%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@
   grid-template-columns: 1fr 1.5fr;
   gap: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255 255 255 / 10%);
 }
 
 .footer-column h4 {
@@ -85,7 +85,7 @@
 
 .footer-column a {
   display: block;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255 255 255 / 60%);
   text-decoration: none;
   font-size: 0.95rem;
   margin-bottom: 0.75rem;
@@ -100,7 +100,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255 255 255 / 60%);
   font-size: 0.95rem;
   margin-bottom: 1rem;
   text-decoration: none;
@@ -120,16 +120,16 @@
   margin: 0 auto;
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255 255 255 / 10%);
   text-align: center;
 }
 
 .footer-copyright p {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgb(255 255 255 / 40%);
   font-size: 0.875rem;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .footer-top {
     grid-template-columns: 1fr;
     gap: 2rem;
