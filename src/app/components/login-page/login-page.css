@@ -4,7 +4,7 @@
   padding: 2rem;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 8%);
 }
 
 .toggle-group {
@@ -26,12 +26,13 @@
 
 .toggle-item.active {
   background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
 }
 
 .content h1 {
   margin: 0 0 0.5rem;
 }
+
 .content p {
   margin: 0 0 1.5rem;
   color: #555;
@@ -86,6 +87,7 @@ input[type="number"] {
   cursor: pointer;
   transition: opacity 0.2s;
 }
+
 .submit:hover {
   opacity: 0.9;
 }
@@ -94,6 +96,7 @@ input[type="number"] {
 .login-wrapper.customer .submit {
   background: linear-gradient(90deg, #b832f2, #f53ea2);
 }
+
 .login-wrapper.influencer .submit {
   background: linear-gradient(90deg, #ff6a00, #ee0979);
 }
@@ -103,6 +106,7 @@ input[type="number"] {
   background: linear-gradient(90deg, #b832f2, #f53ea2);
   color: white;
 }
+
 .login-wrapper.influencer .toggle-item.active {
   background: linear-gradient(90deg, #ff6a00, #ee0979);
   color: white;

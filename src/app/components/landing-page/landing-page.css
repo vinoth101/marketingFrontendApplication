@@ -1,5 +1,5 @@
 
-cursor: default;
+/* cursor: default; */
 
 /* overall container */
 .landing-cards {
@@ -19,14 +19,15 @@ cursor: default;
   border-radius: 16px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 10%);
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 15%);
 }
 
 .card-image {
@@ -41,7 +42,7 @@ cursor: default;
 }
 
 .card-body h2 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -66,6 +67,7 @@ cursor: default;
   transition: opacity 0.2s;
   margin-top: auto;
 }
+
 .card-button:hover {
   opacity: 0.9;
 }

@@ -20,7 +20,7 @@
 
 .cta-description {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgb(255 255 255 / 90%);
   line-height: 1.7;
   max-width: 650px;
   margin: 0 auto 2.5rem;
@@ -49,7 +49,7 @@
 
 .btn-consultation:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
 }
 
 .btn-chat {
@@ -60,7 +60,7 @@
   color: white;
   padding: 1rem 2rem;
   border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgb(255 255 255 / 50%);
   font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
@@ -68,7 +68,7 @@
 }
 
 .btn-chat:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255 255 255 / 10%);
   border-color: white;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .feature-card {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(255 255 255 / 15%);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   padding: 2rem 1.5rem;
@@ -100,11 +100,11 @@
 
 .card-description {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(255 255 255 / 80%);
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .cta-title {
     font-size: 2rem;
   }
