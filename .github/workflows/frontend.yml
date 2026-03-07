@@ -44,3 +44,5 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "dist/*/browser/*"
           target: "/var/www/html"
+          strip_components: 3
+          
