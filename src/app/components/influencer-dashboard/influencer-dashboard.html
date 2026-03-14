@@ -1,0 +1,82 @@
+<div class="dashboard-bg">
+  <div class="dashboard-header">
+    <img [src]="user.avatar" class="profile-pic" alt="Profile" />
+    <div class="profile-info">
+      <h2>{{ user.name }}</h2>
+      <span class="category">{{ user.category }}</span>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn"><span class="icon-bell"></span></button>
+      <button class="icon-btn"><span class="icon-settings"></span></button>
+    </div>
+  </div>
+
+  <section class="stats-section">
+    <h3>My Stats</h3>
+    <div class="stats-grid">
+      @for (stat of user.stats; track stat) {
+        <div class="stat-card">
+          <div class="stat-icon" [class]="stat.color"><span [class]="'icon-' + stat.icon"></span></div>
+          <div class="stat-value">{{ stat.value }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="promotion-section">
+    <h3>Promotion Hub</h3>
+    <div class="promotion-list">
+      @for (promo of user.promotions; track promo) {
+        <div class="promotion-card">
+          <div class="promo-header">
+            <div>
+              <div class="promo-title">{{ promo.title }}</div>
+              <div class="promo-brand">{{ promo.brand }}</div>
+            </div>
+            <span class="promo-status" [class.active]="promo.status === 'Active'" [class.review]="promo.status === 'In Review'">{{ promo.status }}</span>
+          </div>
+          <div class="promo-details">
+            <span class="promo-budget">$ {{ promo.budget }}</span>
+            <span class="promo-deadline">{{ promo.deadline }}</span>
+          </div>
+          <div class="promo-progress">
+            <div class="progress-bar" [style.width]="promo.progress + '%'">
+              <span class="progress-label">{{ promo.progress }}%</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="request-section">
+    <h3>Request Inbox <span class="request-count">{{ user.requests.length }}</span></h3>
+    <div class="request-list">
+      @for (req of user.requests; track req) {
+        <div class="request-card">
+          <img [src]="req.avatar" class="request-avatar" alt="{{ req.name }}" />
+          <div class="request-info">
+            <div class="request-header">
+              <span class="request-name">{{ req.name }}</span>
+              <span class="request-business">{{ req.business }}</span>
+              <span class="request-category">{{ req.category }}</span>
+              <span class="request-time">{{ req.time }}</span>
+            </div>
+            <div class="request-desc">{{ req.description }}</div>
+            <div class="request-meta">
+              <span class="meta-budget">$ {{ req.budget }}</span>
+              <span class="meta-timeline">{{ req.timeline }}</span>
+              <span class="meta-location">{{ req.location }}</span>
+              <span class="meta-followers">{{ req.requiredFollowers }}</span>
+            </div>
+            <div class="request-actions">
+              <button class="accept-btn">Accept</button>
+              <button class="decline-btn">Decline</button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+</div>
